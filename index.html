@@ -5,6 +5,27 @@
 <img class="avatar" id="avatar" alt="avatar"><h1 id="name">bobrek</h1><p id="tag">join temm bobrek tofday</p><div class="location" id="location">⌖ Russia</div>
 <div class="presence" id="presence"><div class="presence-avatar-wrap"><img id="davatar" alt="Discord avatar"><i id="state" aria-label="Discord status"></i></div><div class="presence-text"><div class="presence-heading"><b id="dname">bobrek</b><span class="profile-pill" id="profile-pill"><span id="profile-pill-emoji">💗</span><span id="profile-pill-text">meow</span></span><span class="profile-badge" aria-label="Profile badge">✦</span></div><span id="activity">Discord presence not configured</span><small id="detail">add User ID in config.js</small></div></div>
 <nav id="socials" class="socials" aria-label="Social links"></nav>
-<div class="music"><button id="play" aria-label="Play music">▶</button><div class="track"><b id="track">music</b><small id="musicState">click to play</small></div><div class="eq"><i></i><i></i><i></i><i></i><i></i></div><audio id="audio" loop></audio></div>
-<footer><span>✳ bobrek</span><span id="clock">00:00</span></footer></section><div class="signature">NO ONE KNOWS YOU HERE</div></main>
-<script src="config.js"></script><script src="script.js"></script></body></html>
+<section class="music soundcloud-player" id="soundcloud-player" aria-label="SoundCloud music player">
+  <div class="sc-row">
+    <div class="sc-track"><b id="sc-title">bobrek playlist</b></div>
+    <a id="sc-open" class="sc-open" href="https://soundcloud.com/screpka228_st/sets/bobrek-playlist" target="_blank" rel="noopener noreferrer" aria-label="Открыть плейлист" title="Открыть плейлист">↗</a>
+  </div>
+  <div class="sc-progress-row">
+    <span id="sc-current-time" class="sc-time">0:00</span>
+    <input id="sc-seek" class="sc-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Перемотка трека" title="Перемотка трека">
+    <span id="sc-duration" class="sc-time">0:00</span>
+  </div>
+  <div class="sc-controls" aria-label="Управление музыкой">
+    <label class="sc-volume" title="Громкость" aria-label="Громкость">
+      <span aria-hidden="true">♪</span>
+      <input id="sc-volume" type="range" min="0" max="100" value="10" step="1" aria-label="Громкость SoundCloud">
+    </label>
+    <button id="sc-prev" type="button" aria-label="Предыдущий трек" title="Предыдущий трек">‹</button>
+    <button id="sc-toggle" type="button" aria-label="Воспроизвести" title="Воспроизвести">▶</button>
+    <button id="sc-next" type="button" aria-label="Следующий трек" title="Следующий трек">›</button>
+    <button id="sc-repeat" type="button" aria-label="Повтор трека выключен" title="Повтор трека: выкл" aria-pressed="false">↻</button>
+  </div>
+  <div id="sc-frame-wrap" class="sc-frame-wrap" aria-hidden="true"></div>
+</section>
+<footer><span>✳ bobrek</span><div class="visitor-count" aria-label="Счётчик посещений"><span class="visitor-dot" aria-hidden="true"></span><span>visitors</span><b id="visitor-total">…</b></div><span id="clock">00:00</span></footer></section><div class="signature">NO ONE KNOWS YOU HERE</div></main>
+<script data-goatcounter="https://screpka228.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script src="config.js"></script><script src="script.js"></script><script>fetch("https://screpka228.goatcounter.com/counter/TOTAL.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("counter unavailable");return r.json()}).then(d=>{const el=document.getElementById("visitor-total");if(d&&d.count!==undefined&&d.count!==null){el.textContent=Number(d.count).toLocaleString();el.title="Общее число визитов по данным GoatCounter"}else{el.textContent="…";el.title="Включи показ счётчика в настройках GoatCounter"}}).catch(()=>{const el=document.getElementById("visitor-total");el.textContent="…";el.title="Не удалось получить статистику. Проверь настройку Allow adding visitor counts on your website в GoatCounter."})</script></body></html>
